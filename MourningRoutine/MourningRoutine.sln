@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MourningRoutine", "MourningRoutine\MourningRoutine.csproj", "{9A58E70C-6B75-487E-99CC-66BD82F5BF21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MourningRoutine.Tests", "MourningRoutine.Tests\MourningRoutine.Tests.csproj", "{2648E75C-1DCA-469E-895E-F2BEDCE9468D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A58E70C-6B75-487E-99CC-66BD82F5BF21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A58E70C-6B75-487E-99CC-66BD82F5BF21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A58E70C-6B75-487E-99CC-66BD82F5BF21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A58E70C-6B75-487E-99CC-66BD82F5BF21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2648E75C-1DCA-469E-895E-F2BEDCE9468D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2648E75C-1DCA-469E-895E-F2BEDCE9468D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2648E75C-1DCA-469E-895E-F2BEDCE9468D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2648E75C-1DCA-469E-895E-F2BEDCE9468D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
