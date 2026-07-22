@@ -10,6 +10,11 @@ public class MyMorningRoutine(IClock internalClock)
         {
             return "From 06:00 to 06:59 - Do exercise";
         }
-        return "From 07:00 to 07:59 - Read and study";
+        if (now < new TimeSpan(0, 8, 0, 0)
+            && now >= new TimeSpan(0, 7, 0, 0))
+        {
+            return "From 07:00 to 07:59 - Read and study";
+        }
+        return "From 08:00 to 08:59 - Have breakfast";
     }
 }
