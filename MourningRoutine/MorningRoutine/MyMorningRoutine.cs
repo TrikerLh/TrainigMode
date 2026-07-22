@@ -1,6 +1,6 @@
 namespace MourningRoutine;
 
-public class MyMourningRoutine
+public class MyMorningRoutine
 {
     public string WhatShouldIDoNow()
     {

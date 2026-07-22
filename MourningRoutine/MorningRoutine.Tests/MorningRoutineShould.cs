@@ -2,7 +2,7 @@
 
 namespace MourningRoutine.Tests;
 
-public class MourningRoutineShould
+public class MorningRoutineShould
 {
     [SetUp]
     public void Setup()
@@ -12,7 +12,7 @@ public class MourningRoutineShould
     [Test]
     public void ReturnDoExerciseBetween6To7()
     {
-        var mourningRoutine = new MyMourningRoutine();
+        var mourningRoutine = new MyMorningRoutine();
 
         var response = mourningRoutine.WhatShouldIDoNow();
 

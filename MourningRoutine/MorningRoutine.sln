@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MourningRoutine", "MourningRoutine\MourningRoutine.csproj", "{9A58E70C-6B75-487E-99CC-66BD82F5BF21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorningRoutine", "MorningRoutine\MorningRoutine.csproj", "{9A58E70C-6B75-487E-99CC-66BD82F5BF21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MourningRoutine.Tests", "MourningRoutine.Tests\MourningRoutine.Tests.csproj", "{2648E75C-1DCA-469E-895E-F2BEDCE9468D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorningRoutine.Tests", "MorningRoutine.Tests\MorningRoutine.Tests.csproj", "{2648E75C-1DCA-469E-895E-F2BEDCE9468D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
