@@ -34,4 +34,15 @@ public class MorningRoutineShould
         
         response.Should().Be("From 07:00 to 07:59 - Read and study");
     }
+
+    [Test]
+    public void ReturnHaveBreakfastBetween8To9()
+    {
+        var mourningRoutine = new MyMorningRoutine(_mockClock);
+        _mockClock.Now().Returns(new DateTime(2026, 07, 22, 8, 1, 0));
+        
+        var response = mourningRoutine.WhatShouldIDoNow();
+        
+        response.Should().Be("From 08:00 to 08:59 - Have breakfast");
+    }
 }
