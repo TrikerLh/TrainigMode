@@ -7,17 +7,17 @@ public class MyMorningRoutine(IClock internalClock)
         var now = internalClock.Now().TimeOfDay;
         if (Between(now, 6, 7))
         {
-            return "From 06:00 to 06:59 - Do exercise";
+            return new Task(6, 0, 6, 59, "Do exercise").ToString();
         }
 
         if (Between(now, 7, 8))
         {
-            return "From 07:00 to 07:59 - Read and study";
+            return new Task(7, 0, 7, 59, "Read and study").ToString();
         }
 
         if (Between(now, 8, 9))
         {
-            return "From 08:00 to 08:59 - Have breakfast";
+            return new Task(8, 0, 8, 59, "Have breakfast").ToString();
         }
 
         return "No activity";
