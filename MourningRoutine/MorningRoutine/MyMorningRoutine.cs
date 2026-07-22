@@ -20,7 +20,7 @@ public class MyMorningRoutine(IClock internalClock)
             return new Task(8, 0, 8, 59, "Have breakfast").ToString();
         }
 
-        return "No activity";
+        return new NullTask().ToString();
     }
 
     private static bool Between(TimeSpan now, int startHour, int endHour) =>

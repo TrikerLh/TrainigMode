@@ -1,6 +1,6 @@
 ﻿namespace MourningRoutine;
 
-public class Task(int beginHour, int beginMinute, int endHour, int endMinute, string description)
+public class Task(int beginHour, int beginMinute, int endHour, int endMinute, string description) : ITask
 {
     public override string ToString()
     {
