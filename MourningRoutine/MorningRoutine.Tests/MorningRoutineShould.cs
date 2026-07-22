@@ -44,4 +44,14 @@ public class MorningRoutineShould
         
         response.Should().Be("From 08:00 to 08:59 - Have breakfast");
     }
+
+    [Test]
+    public void ReturnNoActivityByDefault()
+    {
+        _mockClock.Now().Returns(new DateTime(2026, 07, 22, 10, 1, 0));
+        
+        var response = _mourningRoutine.WhatShouldIDoNow();
+        
+        response.Should().Be("No activity");
+    }
 }
