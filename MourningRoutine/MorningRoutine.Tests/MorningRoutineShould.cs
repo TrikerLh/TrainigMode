@@ -6,20 +6,21 @@ namespace MourningRoutine.Tests;
 public class MorningRoutineShould
 {
     private IClock _mockClock;
+    private MyMorningRoutine _mourningRoutine;
 
     [SetUp]
     public void Setup()
     {
         _mockClock = Substitute.For<IClock>();
+        _mourningRoutine = new MyMorningRoutine(_mockClock);
     }
 
     [Test]
     public void ReturnDoExerciseBetween6To7()
     {
-        var mourningRoutine = new MyMorningRoutine(_mockClock);
         _mockClock.Now().Returns(new DateTime(2026, 07, 22, 6, 1, 0));
 
-        var response = mourningRoutine.WhatShouldIDoNow();
+        var response = _mourningRoutine.WhatShouldIDoNow();
 
         response.Should().Be("From 06:00 to 06:59 - Do exercise");
     }
@@ -27,10 +28,9 @@ public class MorningRoutineShould
     [Test]
     public void ReturnStudyBetween7To8()
     {
-        var mourningRoutine = new MyMorningRoutine(_mockClock);
         _mockClock.Now().Returns(new DateTime(2026, 07, 22, 7, 1, 0));
         
-        var response = mourningRoutine.WhatShouldIDoNow();
+        var response = _mourningRoutine.WhatShouldIDoNow();
         
         response.Should().Be("From 07:00 to 07:59 - Read and study");
     }
@@ -38,10 +38,9 @@ public class MorningRoutineShould
     [Test]
     public void ReturnHaveBreakfastBetween8To9()
     {
-        var mourningRoutine = new MyMorningRoutine(_mockClock);
         _mockClock.Now().Returns(new DateTime(2026, 07, 22, 8, 1, 0));
         
-        var response = mourningRoutine.WhatShouldIDoNow();
+        var response = _mourningRoutine.WhatShouldIDoNow();
         
         response.Should().Be("From 08:00 to 08:59 - Have breakfast");
     }
