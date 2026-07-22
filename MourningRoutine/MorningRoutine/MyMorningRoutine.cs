@@ -5,22 +5,25 @@ public class MyMorningRoutine(IClock internalClock)
     public string WhatShouldIDoNow()
     {
         var now = internalClock.Now().TimeOfDay;
-        if (Between6And7(now))
+        if (Between(now, 6, 7))
         {
             return "From 06:00 to 06:59 - Do exercise";
         }
-        if (Between7And8(now))
+
+        if (Between(now, 7, 8))
         {
             return "From 07:00 to 07:59 - Read and study";
         }
-        return "From 08:00 to 08:59 - Have breakfast";
+
+        if (Between(now, 8, 9))
+        {
+            return "From 08:00 to 08:59 - Have breakfast";
+        }
+
+        return "No activity";
     }
 
-    private static bool Between7And8(TimeSpan now) =>
-        now < new TimeSpan(0, 8, 0, 0)
-        && now >= new TimeSpan(0, 7, 0, 0);
-
-    private static bool Between6And7(TimeSpan now) =>
-        now < new TimeSpan(0, 7, 0, 0)
-        && now >= new TimeSpan(0, 6, 0, 0);
+    private static bool Between(TimeSpan now, int startHour, int endHour) =>
+        now >= new TimeSpan(0, startHour, 0, 0)
+        && now < new TimeSpan(0, endHour, 0, 0);
 }
