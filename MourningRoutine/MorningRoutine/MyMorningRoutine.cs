@@ -1,17 +1,10 @@
 namespace MourningRoutine;
 
-public class MyMorningRoutine
+public class MyMorningRoutine(IClock internalClock)
 {
-    private IClock _internalClock;
-
-    public MyMorningRoutine(IClock internalClock)
-    {
-        _internalClock = internalClock;
-    }
-
     public string WhatShouldIDoNow()
     {
-        var now = _internalClock.Now().TimeOfDay;
+        var now = internalClock.Now().TimeOfDay;
         if (now < new TimeSpan(0, 7, 0, 0)
             && now >= new TimeSpan(0, 6, 0, 0))
         {
