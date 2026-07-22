@@ -13,7 +13,11 @@ public class MyMorningRoutine(IClock internalClock)
         {
             return "From 07:00 to 07:59 - Read and study";
         }
-        return "From 08:00 to 08:59 - Have breakfast";
+        if (Between8And9(now))
+        {
+            return "From 08:00 to 08:59 - Have breakfast";
+        }
+        return "No activity";
     }
 
     private static bool Between7And8(TimeSpan now) =>
@@ -23,4 +27,8 @@ public class MyMorningRoutine(IClock internalClock)
     private static bool Between6And7(TimeSpan now) =>
         now < new TimeSpan(0, 7, 0, 0)
         && now >= new TimeSpan(0, 6, 0, 0);
+    
+    private static bool Between8And9(TimeSpan now) =>
+        now < new TimeSpan(0, 9, 0, 0)
+        && now >= new TimeSpan(0, 8, 0, 0);
 }
