@@ -20,8 +20,3 @@ public class MyMorningRoutine
         return "From 07:00 to 07:59 - Read and study";
     }
 }
-
-public interface IClock
-{
-    DateTime Now();
-}
